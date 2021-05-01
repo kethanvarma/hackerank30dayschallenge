@@ -1,0 +1,10 @@
+#to find sample interest
+
+principal = int(input())
+interest = int(input())
+year = int(input())
+sample_interest_appr = (principal*interest*year)/100
+sample_interest = round(sample_interest_appr)
+print(sample_interest)
+
+
