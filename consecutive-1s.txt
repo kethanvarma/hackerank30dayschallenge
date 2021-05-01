@@ -1,0 +1,29 @@
+#to find out max consective 1's in a binary number:
+#for example if a number in decimal 125 and its binary is 1111101: here max consective 1's is 5. 
+
+
+n = int(input())
+binary = []
+while True:
+    remainder = n%2
+    binary.append(remainder)
+    n = n//2
+    if n == 1:
+        binary.append(remainder)
+        break
+        
+count = 0    
+result = 0
+    
+for i in binary:
+    if i == 0:#if it is 0 count = 0 or it is 1 count increments by 1
+        count = 0
+    else:
+        count+=1
+        result = max(result,count) #here i am comparing two numbers and stored max vlaue in result.
+
+
+print(result)
+                       
+            
+        
